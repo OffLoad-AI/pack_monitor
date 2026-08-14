@@ -1,0 +1,76 @@
+{
+  "calibrated": true,
+  "calibration": {
+    "by_jpeg_quality": {
+      "60": {
+        "max_correct_fraction": 0.00550844,
+        "median_correct_fraction": 0.0
+      },
+      "75": {
+        "max_correct_fraction": 0.00582667,
+        "median_correct_fraction": 0.0
+      },
+      "85": {
+        "max_correct_fraction": 0.00542158,
+        "median_correct_fraction": 0.0
+      },
+      "95": {
+        "max_correct_fraction": 0.00571014,
+        "median_correct_fraction": 0.0
+      }
+    },
+    "by_size": {
+      "1000": {
+        "max_correct_fraction": 0.0,
+        "median_correct_fraction": 0.0
+      },
+      "1200": {
+        "max_correct_fraction": 0.0,
+        "median_correct_fraction": 0.0
+      },
+      "1500": {
+        "max_correct_fraction": 5.11e-06,
+        "median_correct_fraction": 0.0
+      },
+      "800": {
+        "max_correct_fraction": 0.00582667,
+        "median_correct_fraction": 0.00289317
+      }
+    },
+    "changed_pixels": 43363639,
+    "chart": "/home/nick/Offload/Clients/Yoga Bar/calibration/noise_floor.png",
+    "chroma": {
+      "changed_p99": 84.0,
+      "separation_margin": 55.0,
+      "unchanged_p99_9": 29.0
+    },
+    "corpus": "/home/nick/Offload/Clients/Yoga Bar/data/corpus",
+    "image_pairs": 192,
+    "luma": {
+      "changed_p99": 83.0,
+      "separation_margin": -6.0,
+      "unchanged_p99_9": 89.0
+    },
+    "per_image_chroma_p99_9": {
+      "max": 46.0,
+      "p50": 25.0,
+      "p75": 35.25
+    },
+    "per_image_luma_p99_9": {
+      "max": 124.0,
+      "p50": 79.5,
+      "p75": 102.0
+    },
+    "region_correct_p99": 0.02,
+    "region_overlap_warning": true,
+    "region_wrong_p05": 1e-06,
+    "region_wrong_p50": 0.073333,
+    "unchanged_pixels": 23040000,
+    "whole_image_correct_max": 0.00582667,
+    "whole_image_wrong_median": 0.00294247
+  },
+  "chroma_threshold": 29.0,
+  "clean_fraction": 0.01748001,
+  "luma_threshold": 89.0,
+  "region_changed_fraction": 0.005
+}

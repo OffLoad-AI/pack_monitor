@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-surface-page text-ink font-sans text-base antialiased;
+    font-feature-settings: "cv05" 1, "ss01" 1;
+  }
+
+  /* Numbers must line up in a table of nutrition values. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.focus");
+    outline-offset: 1px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: #d7e3fb;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-surface border border-line rounded;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-1.5 rounded border px-2.5 py-1.5 text-sm
+           font-medium transition-colors select-none;
+  }
+  .btn-primary {
+    @apply btn bg-ink text-white border-ink hover:bg-ink-2 hover:border-ink-2
+           disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .btn-ghost {
+    @apply btn bg-surface text-ink-2 border-line hover:bg-surface-sunk hover:text-ink
+           disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .btn-sm {
+    @apply px-2 py-1 text-xs;
+  }
+
+  .field {
+    @apply w-full rounded border border-line bg-surface px-2 py-1.5 text-sm
+           text-ink placeholder:text-ink-4;
+  }
+
+  /* Dense table: many rows visible without scrolling. */
+  .dense-table {
+    @apply w-full border-collapse text-sm;
+  }
+  .dense-table th {
+    @apply sticky top-0 z-10 bg-surface-sunk px-3 py-2 text-left text-2xs font-semibold
+           uppercase tracking-wide text-ink-3 border-b border-line whitespace-nowrap;
+  }
+  .dense-table td {
+    @apply px-3 py-1.5 border-b border-line/70 align-middle whitespace-nowrap;
+  }
+  .dense-table tbody tr:hover {
+    @apply bg-surface-sunk;
+  }
+  .dense-table tbody tr[data-selected="true"] {
+    @apply bg-[#eaf0fb];
+  }
+  .dense-table tbody tr[data-cursor="true"] td:first-child {
+    box-shadow: inset 2px 0 0 theme("colors.ink.DEFAULT");
+  }
+
+  .kbd {
+    @apply inline-flex min-w-[1.25rem] items-center justify-center rounded border
+           border-line-strong bg-surface px-1 font-mono text-2xs text-ink-2;
+  }
+}

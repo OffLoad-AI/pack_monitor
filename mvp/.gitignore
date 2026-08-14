@@ -1,0 +1,18 @@
+# Generated data. The corpus is reproducible from a seed and the comparison
+# artefacts are reproducible from the corpus, so neither belongs in git — and
+# the other build filled a disk with exactly this kind of output.
+data/
+calibration/*.png
+
+# Environments
+.venv/
+node_modules/
+frontend/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editors
+.DS_Store

@@ -1,0 +1,43 @@
+# Core imaging and comparison
+numpy==2.5.2
+pillow==12.3.0
+opencv-python-headless==5.0.0.93
+scikit-image==0.26.0
+scipy==1.18.0
+
+# API
+fastapi==0.141.1
+uvicorn==0.52.1
+sse-starlette==3.4.8
+python-multipart==0.0.32
+pydantic==2.13.4
+
+# Persistence and logging
+SQLAlchemy==2.0.51
+structlog==26.1.0
+
+# Calibration chart
+matplotlib==3.11.1
+
+# Tests
+pytest==9.1.1
+httpx==0.28.1
+
+# OCR.
+#
+# The spec names PaddleOCR. This runs the same PP-OCR detection and recognition
+# models through ONNX Runtime, differing only in the runtime underneath them, and
+# installs in ~15MB rather than pulling in the whole PaddlePaddle framework.
+# `core/ocr/paddle.py` is the same interface over PaddleOCR proper and is picked
+# first when it is installed, so `pip install paddleocr` is all that is needed to
+# switch.
+#
+# Installed with --no-deps because it declares opencv-python, which would install
+# a second full copy of OpenCV alongside the headless build already listed above.
+# Its remaining requirements are listed explicitly below.
+rapidocr-onnxruntime==1.4.4
+onnxruntime==1.28.0
+pyclipper==1.4.0
+shapely==2.1.2
+PyYAML==6.0.3
+six==1.17.0

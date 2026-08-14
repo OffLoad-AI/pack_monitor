@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/
+data/corpus/
+data/diffs/
+data/thumbs/
+data/db.sqlite*
+.pytest_cache/

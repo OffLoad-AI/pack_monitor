@@ -1,0 +1,97 @@
+{
+  "border_uniform_tolerance": 10.0,
+  "calibrated": true,
+  "calibration": {
+    "changed_pixels": 2353911,
+    "chosen": {
+      "chroma_threshold": 20.4286,
+      "percentile_used": 99.9,
+      "rationale": "99.9th percentile of the unchanged distribution; recall is bought by the region-area floor and the OCR stage, not by a generous per-pixel threshold.",
+      "ssim_threshold": 0.38412
+    },
+    "chroma": {
+      "changed": {
+        "50": 12.0,
+        "90": 15.428572,
+        "95": 34.591835,
+        "99": 101.0,
+        "99.5": 116.0,
+        "99.9": 126.0,
+        "99.99": 126.0
+      },
+      "unchanged": {
+        "50": 0.979592,
+        "90": 4.0,
+        "95": 6.551021,
+        "99": 12.653061,
+        "99.5": 15.183674,
+        "99.9": 20.428572,
+        "99.99": 26.489796
+      }
+    },
+    "pairs_failed_registration": 0,
+    "pairs_used": 111,
+    "separation": {
+      "chroma_changed_p99": 101.0,
+      "chroma_margin": 80.5714,
+      "note": "changed p99 minus unchanged p99.9; positive means the two populations separate at the chosen threshold.",
+      "ssim_changed_p99": 0.496207,
+      "ssim_margin": 0.112086
+    },
+    "ssim": {
+      "changed": {
+        "50": 0.000547,
+        "90": 0.055797,
+        "95": 0.346572,
+        "99": 0.496207,
+        "99.5": 0.610033,
+        "99.9": 0.938315,
+        "99.99": 0.961321
+      },
+      "unchanged": {
+        "50": 0.0,
+        "90": 0.020406,
+        "95": 0.03329,
+        "99": 0.119526,
+        "99.5": 0.182467,
+        "99.9": 0.38412,
+        "99.99": 0.484933
+      }
+    },
+    "unchanged_pixels": 9000000
+  },
+  "chroma_dominance_fraction": 0.75,
+  "chroma_threshold": 20.4286,
+  "confusable_max_distance": 1,
+  "global_change_area_fraction": 0.4,
+  "global_change_min_area_fraction": 0.02,
+  "global_change_min_regions": 10,
+  "max_border_crop_fraction": 0.3,
+  "max_regions": 25,
+  "min_region_area_fraction": 0.0005,
+  "morph_close_x": 31,
+  "morph_close_y": 7,
+  "morph_open": 3,
+  "numeric_relative_tolerance": 1e-09,
+  "ocr_asymmetric_ink_ratio": 0.55,
+  "ocr_backend": "auto",
+  "ocr_consistency_scale": 1.6,
+  "ocr_crop_pad_fraction": 0.1,
+  "ocr_min_long_edge": 300,
+  "ocr_min_token_confidence": 0.55,
+  "ocr_upscale_max": 3.0,
+  "overlap_erode_px": 8,
+  "registration_inliers_ok": 30,
+  "registration_inliers_required": 15,
+  "registration_lowe_ratio": 0.75,
+  "registration_max_condition_number": 1000000.0,
+  "registration_max_features": 6000,
+  "registration_max_scale": 4.0,
+  "registration_min_overlap_fraction": 0.3,
+  "registration_min_scale": 0.25,
+  "registration_min_sift_keypoints": 100,
+  "registration_ransac_reproj_px": 3.0,
+  "ssim_threshold": 0.38412,
+  "ssim_window": 7,
+  "unreliable_similarity": 0.75
+}
