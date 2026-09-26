@@ -1,4 +1,6 @@
 # Packaging compliance monitor
+(Under development for Yogabar)
+
 
 Marketplace listings drift. A brand revises a pack — a nutrition value changes, a
 claim is withdrawn, a certification mark expires — but the storefront keeps serving
